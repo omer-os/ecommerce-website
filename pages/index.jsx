@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Layout } from "../components/Files";
 import Head from "next/head";
 import Script from "next/script";
-export default function index({ data }) {
+export default function Index({ data }) {
   const [Products, setProducts] = useState([]);
   const [ShoppingCart, setShoppingCart] = useState([]);
 
@@ -14,12 +14,12 @@ export default function index({ data }) {
   return (
     <div>
       <Head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script
+        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></Script>
+        <Script
           src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
           data-api-key="YzllOTYyMzctNWNhMS00NmI0LTk2OGMtOTA2NzA5NmU2MDViNjM3ODY2NDA5MDU3ODIwMTc3"
           id="snipcart"
-        ></script>
+        ></Script>
         <link
           href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
           rel="stylesheet"
