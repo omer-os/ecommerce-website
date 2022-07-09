@@ -75,7 +75,7 @@ export default function Index({ data }) {
                     data-item-name={product.title}
                     data-item-price={product.price}
                     data-item-weight={product.price}
-                    data-item-url="http://localhost:3000/api/products"
+                    data-item-url="ecommerce-website-indol.vercel.app/api/products"
                     data-item-description={product.description}
                     data-item-image={product.image}
                   >
@@ -97,7 +97,7 @@ export default function Index({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("ecommerce-website-indol.vercel.app/api/products");
   const data = await res.json();
 
   return {
