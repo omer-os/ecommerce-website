@@ -14,12 +14,6 @@ export default function Index({ data }) {
   return (
     <div>
       <Head>
-        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></Script>
-        <Script
-          src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-          data-api-key="YzllOTYyMzctNWNhMS00NmI0LTk2OGMtOTA2NzA5NmU2MDViNjM3ODY2NDA5MDU3ODIwMTc3"
-          id="snipcart"
-        ></Script>
         <link
           href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
           rel="stylesheet"
@@ -27,7 +21,12 @@ export default function Index({ data }) {
         />
         <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
-
+      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></Script>
+      <Script
+        src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+        data-api-key="YzllOTYyMzctNWNhMS00NmI0LTk2OGMtOTA2NzA5NmU2MDViNjM3ODY2NDA5MDU3ODIwMTc3"
+        id="snipcart"
+      ></Script>
       <Layout
         ShoppingCart={ShoppingCart}
         Products={Products}

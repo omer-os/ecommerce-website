@@ -117,8 +117,8 @@ export default function NavBar({ Products, setProducts, ShoppingCart }) {
               </svg>
               <span className="pl-1 text-gray-500 text-md">
                 {/* {ShoppingCart.length} */}
-                <div class="snipcart-summary">
-                  <span class="snipcart-total-items">0</span>
+                <div className="snipcart-summary">
+                  <span className="snipcart-total-items">0</span>
                 </div>
               </span>
             </a>
