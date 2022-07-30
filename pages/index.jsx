@@ -3,11 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { Layout } from "../components/Files";
 import Head from "next/head";
 import Script from "next/script";
+import {motion} from "framer-motion";
 
 export default function Index({ data }) {
   const [Products, setProducts] = useState([]);
   const [ShoppingCart, setShoppingCart] = useState([]);
-  
+
   useEffect(() => {
     setProducts(data.data);
   }, []);
@@ -33,10 +34,11 @@ export default function Index({ data }) {
         Products={Products}
         setProducts={setProducts}
       >
-        <div className="grid auto-rows-[470px] gap-8 md:px-12 px-4 justify-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 ">
+        <motion.div layout className="grid auto-rows-[470px] gap-8 md:px-12 px-4 justify-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 ">
           {Products.map((product, index) => {
             return (
-              <div
+              <motion.div
+              layout
                 key={product.id}
                 className="product shadow-[0_0_15px] shadow-gray-300 p-3 rounded flex gap-1 flex-col justify-between bg-white border border-gray-300"
               >
@@ -88,17 +90,19 @@ export default function Index({ data }) {
                     </a>
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://ecommerce-website-indol.vercel.app/api/products");
+  const res = await fetch(
+    "https://ecommerce-website-indol.vercel.app/api/products"
+  );
   const data = await res.json();
 
   return {

@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-*::-webkit-scrollbar{
-    display: none;
+*::-webkit-scrollbar {
+  display: none;
 }
-.card-layout{
-    display: grid;
-    background-color: white;
-    grid-template-columns: minmax(300px,350px) 1fr;
-    grid-template-rows: 1fr;
+.card-layout {
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(300px, 350px) 1fr;
+  grid-template-rows: 1fr;
+}
+
+@layer components {
+  .click-action {
+    @applay active:scale-95 transition-all duration-300 cursor-pointer;
+  }
+}
+
+nav {
+  font-family: sans-serif;
+}
+.logo {
+  font-family: "Lobster", cursive;
 }
