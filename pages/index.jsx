@@ -15,14 +15,7 @@ export default function Index({ data }) {
 
   return (
     <div>
-      <Head>
-        <link
-          href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
-      </Head>
+      
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></Script>
       <Script
         src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
